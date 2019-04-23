@@ -69,10 +69,7 @@ def detail(index):
 def add_food():
     if request.method == 'GET':
         return render_template('add_food.html')
-    elif request.method == 'POST':
-        form = request.form
-        print(form)
-        return "Vừa POST chứ gì"
+
 if __name__ == '__main__':
     app.run(debug=True)
  

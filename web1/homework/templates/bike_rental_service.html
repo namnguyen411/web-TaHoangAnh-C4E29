@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bike Rental Service</title>
+</head>
+<body>
+    {% for bike in bikes %}
+     <b>Number: </b>{{ loop.index }} <br>
+     <b>Name: </b>{{ bike.name }} <br>
+     <b>Daily fee (VND): </b>{{ bike.price }} <br>
+     <img src="{{ bike.link }}"> <br>
+     <b>Year </b>{{ bike.year }}
+     <hr>
+    {% endfor %}
+
+</body>
+</html>

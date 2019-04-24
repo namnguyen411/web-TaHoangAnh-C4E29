@@ -8,14 +8,15 @@
 </head>
 <body>
     <form method="POST">
-     <input type="text" placeholder="Tiêu đề" name="title"> <br> <br>
+     <input type="text" placeholder="Tiêu đề" name="title" required> <br> <br>
  
-     <input type="text" placeholder="Mô tả" name="description"><br> <br>
+     <input type="text" placeholder="Mô tả" name="description" required > <br> <br>
 
-     <input type="text" placeholder="Link" name="link"> <br> <br>
-    
-     <input type="text" placeholder="Loại" name="type"> <br> <br>
-
+     <input type="text" placeholder="Link" name="link" required > <br> <br>
+     <select name="type"> 
+      <option value="drink">Đồ uống</option>
+      <option value="eat">Món ăn</option>
+     </select>
      <button>Xác nhận</button>
     </form>
 </body>

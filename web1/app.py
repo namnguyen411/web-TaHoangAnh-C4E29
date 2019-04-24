@@ -1,4 +1,4 @@
-from flask import Flask, render_template , request
+from flask import Flask, render_template , request , redirect
 app = Flask(__name__)
 
 foods = [
@@ -71,8 +71,30 @@ def add_food():
         return render_template('add_food.html')
     elif request.method == 'POST':
         form = request.form
-        print(form)
-        return "Vừa POST chứ gì"
+        new_food = {
+            "title" : form['title'],
+            "description" : form['description'],
+            "link" : form['link'],
+            "type" : form['type'],
+        }
+        foods.append(new_food)
+        return redirect('/food')
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+    elif request.method == 'POST':
+        form = request.form
+        return "Login page"
+        if  form['username'] == "c4e" and form['password'] == "c4e":
+            return "Wellcome"
+        else:
+            return "Forbiden"
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form = request.form
+        return 'Register page'
 if __name__ == '__main__':
     app.run(debug=True)
  

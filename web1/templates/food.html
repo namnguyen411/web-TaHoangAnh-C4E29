@@ -17,7 +17,9 @@
         {% else %}
             <p>Đây là đồ uống</p>
         {% endif %}
-        <a href="/food/{{ loop.index0 }}">Chi tiết món ăn</a>
+        <a href="/food/{{ food._id }}">Chi tiết món ăn</a>
+        <a href="/food/edit/{{ food._id }}">Sửa thông tin món ăn</a>
+        <a href="/food/delete/{{ food._id }}">Xóa món ăn</a>
         <hr>
     {% endfor %}
 </body>

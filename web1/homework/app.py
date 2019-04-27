@@ -93,5 +93,13 @@ def new_bike():
 @app.route('/bike_rental_service')
 def bike_rental_service():
    return render_template('bike_rental_service.html', bikes = bikes)
+
+# Homework 24/4/2019
+
+# Serious exercise 1 
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

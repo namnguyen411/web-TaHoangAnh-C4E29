@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add new bike</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <form method='POST'>
-     <b>Model </b> <input type="text" placeholder="e.g. Honda" name="name" required> <br> <br>
-     <b>Daily fee(VND) </b> <input type="number" placeholder="100000" name="price" required> <br> <br>
-     <b>Image </b> <input type="text" placeholder="e.g. http://hondaxemay" name = "link" required> <br> <br>
-     <b>Year </b> <input type="text" placeholder="e.g. 2013" name="year" required> <br><br>
-     <input type="submit" placeholder="Submit">
+
+    <div>
+     <h1>Thông tin của xe bạn muốn cho thuê</h1> <br>
+     <form method='POST'>
+     <b>Model <br> </b> <input type="text" placeholder="e.g. Honda" name="name" required> <br>
+     <b>Daily fee(VND) <br> </b> <input type="number" placeholder="100000" name="price" required> <br>
+     <b>Image <br> </b> <input type="text" placeholder="e.g. http://hondaxemay" name = "link" required> <br>
+     <b>Year </b> <br> <input type="text" placeholder="e.g. 2013" name="year" required> <br>
+     <input type="submit" value="Submit" class="button">
     <form>
+    </div>
 </body> 
 </html>

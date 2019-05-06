@@ -1,4 +1,6 @@
-from flask import Flask, render_template , request , redirect
+from flask import *
+from bike_db import Bikes
+from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # Study (17/4/19)
@@ -74,29 +76,30 @@ def user_name(username):
    return render_template('info.html',users = users, username= username)
 
 # Serious Excercise 2 (Sat 20/4/2019)
-bikes = []
 @app.route('/new_bike', methods = ['GET', 'POST'])
 def new_bike():
    if request.method == 'GET':
       return render_template('new_bike.html' )
    elif request.method == 'POST':
       form = request.form
+      bike_name = form['name']
+      price = form['price']
+      link = form['link']
+      year = form['year']
       new_bike = {
-         "name" : form['name'],
-         "price" : form['price'],
-         "link" : form['link'],
-         "year" : form['year']
+         "name" : bike_name,
+         "price" : price,
+         "link" : link,
+         "year" : year
       }
-      bikes.append(new_bike)
-      print(bikes)
+      Bikes.insert_one(new_bike)
       return redirect('/bike_rental_service')
 @app.route('/bike_rental_service')
 def bike_rental_service():
+   bikes = Bikes.find()
    return render_template('bike_rental_service.html', bikes = bikes)
 
-# Homework 24/4/2019
 
-# Serious exercise 1 
 
 
 

@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+}
+body {
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/207171/pexels-photo-207171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    -webkit-background-size: cover;
+    background-attachment: fixed;
+}
+
+.button {
+    background-color: #6296ea;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+h1 {
+    color : white;
+    font-size: 120%;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    font-style: italic;
+}

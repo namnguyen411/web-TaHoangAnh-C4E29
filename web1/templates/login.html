@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <form action="/login" method = "POST">
@@ -13,12 +14,16 @@
         <input type="submit" value = "Login">
         <input type="reset" value = "Reset" >
     </form>
-    <br> <br> <br>
-    <form action="/register" method = "POST">
-            <input type="text" placeholder="Username" name = "register_username" required> <br> <br>
-            <input type="password" placeholder="Password" name = "register_password" required> <br> <br>
-            <input type="submit" value = "Register">
-            <input type="reset" value = "Reset" >
-        </form>
+   <form>
+        <input type="button" value = "Register" name="register">
+   </form>
+   <div>
+     <h1 id="first-h1">TEST Thử css</h1>
+     <h1 id="second-h1">Test lại lần 2</h1>
+
+     <h2 class="text-blue">ĐÂY LÀ THẺ HEADING 2</h2>
+     <h5 class="text-blue">ĐÂY LÀ THẺ H5 </h5>
+     <h6 class="text-blue">ĐÂY LÀ THẺ H6</h6>
+    </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+{% if loop.index % 2 ==0 %}
+<div id="bg-item">
+    <img id="img-odd-item" src= "{{ food.link }}">
+    <div id="describe-odd-item">
+        <a id="details-odd-button" href="/food/{{ food._id }}">More Details</a>
+        <h4 style="margin : 0">{{ food.description }}</h4> 
+        <h2 style="margin-top: 1rem;margin-bottom: 0.5rem;">Ingredients:</h2>
+        <div id="time-service-icon" style="margin-top: 48px;">
+            <i class="fas fa-clock " style="color: #f2b054; margin-right: 8.5rem;"></i>
+            <i class="fas fa-utensils" style="color :#f2b054"></i>
+        </div>
+        <div >
+            <b class="time-service" style="padding-left: 1.2rem; color:whitesmoke">TIME: </b> 
+            <b class="time-service" style="margin-left: 7.8rem; color:whitesmoke">SERVICE:</b>
+        </div>
+        <h2 style="margin : 0">{{ food.title }}</h2> 
+    </div>
+</div>
+{% else %}
+<div id="bg-even-item">
+    <img id="img-even-item" src= "{{ food.link }}">
+    <div id="describe-even-item"> 
+            <h2 style="margin : 0">{{ food.title }}</h2> 
+            <div id="time-service-icon" style="padding-top : 29px">
+                <i class="fas fa-clock " style="color: #f2b054; margin-right: 8.5rem;"></i>
+                <i class="fas fa-utensils" style="color :#f2b054"></i>
+            </div>
+        <div >
+                <b class="time-service" style="padding-left: 1.2rem; color:whitesmoke">TIME: </b> 
+                <b class="time-service" style="margin-left: 7.8rem; color:whitesmoke">SERVICE:</b>
+        </div>
+        <h2 style="margin-top: 1rem;margin-bottom: 0.5rem;">Ingredients:</h2>
+        <h4 style="margin:0">{{ food.description }}</h4>
+        <a id="details-button" href="/food/{{ food._id }}">More Details</a>
+    </div>
+</div>
+{% endif %}

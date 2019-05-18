@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kristi|Gugi" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/test.css">
+    <link rel="stylesheet" href="../static/css/food.css">
 </head>
 
 <body>
@@ -22,21 +22,30 @@
         <a class="main-menu-item" href="/login">Login</a>
         <a class="main-menu-item" href="/register">Register</a>
     </div>
-    <div class="detail-bg-text" style="position:absolute">
-        <b style="display: flex; justify-content: center;font-size:500%;">{{ food_detail.title }}</b>
-        <br>
-        <div style="display: flex; justify-content:space-around ">
-            <h2>Ingredients:</h2>
-            <h2>How to make it :</h2>
+    <br><br>
+    <h1 class="heading" id="title">{{ food_detail.title }}</h1>
+    <div class="detail-bg-text">
+        <img id="detail-bg" src="{{ food_detail.link }}" width="400" height="400">
+        <div class="food-body">
+            <h1 id="description">{{ food_detail.description }}</h1>
+            <div class="food-process">
+                <div class="ingredients">
+                    <h1>Ingredients</h1>
+                    <h2>{{food_detail.description}}</h2>
+                    <h2>{{food_detail.ingredients}}</h2>
+                </div>
+                <div class="preparation">
+                    <h1>Preparation</h1>
+                    <b>{{food_detail.recipe}}</b>
+                    <h2 style="margin-right:18rem;">Tra google <br> để biết thêm thông tin chi tiết </h2>
+                </div>
+            </div>
         </div>
-        <div style="display : flex; justify-content: space-between">
-            <b>{{ food_detail.description }}</b>
-            <b style="margin-right:18rem;">Tra google <br> để biết thêm thông tin chi tiết </b>
-        </div>
+        
         <!-- <h4 class="detail-recipes">RECIPES</h4>
         <hr class="detail-recipes"> -->
     </div>
-    <img id="detail-bg" src="{{ food_detail.link }}">
+    
 </body>
 
 </html>
